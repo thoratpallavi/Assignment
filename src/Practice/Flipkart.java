@@ -21,13 +21,13 @@ public class Flipkart {
 	    driver.findElement(By.name("q")).sendKeys("winter heater");
 	    driver.findElement(By.xpath("//div[text()='winter water heater']")).click();
 	    driver.findElement(By.xpath("(//a[text()='LE - EASE LITE Instant Heat Winter Season Shock-Proof &...'])[1]")).click();
-	   // driver.findElement(By.xpath("//button[text()='ADD TO CART']")).click();
+	  
 	    Set<String> window = driver.getWindowHandles();
 	    for(String st:window) {            //to get multiple ids we use for each loop
 	    	   
 	    	   System.out.println(st);
 	           driver.switchTo().window(st);
-	           String title=driver.getTitle();
+	           //String title=driver.getTitle();
 	    }
 	      
 	      driver.findElement(By.xpath("//button[text()='ADD TO CART']")).click();
